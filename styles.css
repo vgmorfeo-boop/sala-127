@@ -1,0 +1,405 @@
+/* ===============================
+   VARIABLES INSTITUCIONALES
+================================ */
+:root {
+    --nexa-azul: #003A8F;
+    --nexa-azul-oscuro: #002F6C;
+    --nexa-turquesa: #00A0DF;
+
+    --avvillas-azul: #00A0DF;
+
+    --fondo-claro: #F5F7FA;
+    --texto-principal: #1A1A1A;
+    --texto-secundario: #555555;
+    --blanco: #FFFFFF;
+
+    --whatsapp: #25D366;
+}
+
+/* ===============================
+   RESET GENERAL
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: var(--fondo-claro);
+    color: var(--texto-principal);
+}
+
+/* ===============================
+   CONTENEDOR GENERAL
+================================ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* ===============================
+   LOGOS
+================================ */
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logos img {
+    height: 45px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* ===============================
+   TITULOS
+================================ */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    color: var(--nexa-azul);
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--nexa-azul);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: var(--nexa-azul);
+}
+
+.subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--texto-secundario);
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: var(--texto-secundario);
+}
+
+/* ===============================
+   BOTON ENTRAR
+================================ */
+.btn-enter {
+    background-color: var(--nexa-azul-oscuro);
+    color: var(--blanco);
+    padding: 14px 36px;
+   border-radius: 14px; 
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+    transition: all 0.25s ease;
+}
+
+.btn-enter:hover {
+    background-color: var(--nexa-azul);
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   GRID ASESORES
+================================ */
+.grid-asesores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+/* ===============================
+   TARJETA ASESOR
+================================ */
+.card-asesor {
+    background: var(--blanco);
+    border-radius: 18px;
+    padding: 22px 18px;
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(0, 58, 143, 0.12);
+    position: relative;
+
+}
+
+
+.card-asesor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+}
+
+.card-asesor h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--nexa-azul);
+    margin-bottom: 6px;
+}
+
+.card-asesor span {
+    font-size: 13px;
+    color: #666666;
+    display: block;
+    margin-bottom: 8px;
+
+}
+
+.card-asesor img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--nexa-azul);
+    background-color: var(--blanco);
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+}
+
+/* ===============================
+   PERFIL INDIVIDUAL
+================================ */
+.perfil-foto {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.perfil-foto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--blanco);
+    display: block;
+}
+
+/* ===============================
+   CARD PERFIL
+================================ */
+.card {
+    background-color: var(--blanco);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--texto-principal);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--nexa-azul);
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+/* ===============================
+   CARD DESTACADA
+================================ */
+.card.destacado {
+    background: linear-gradient(
+        135deg,
+        var(--nexa-azul-oscuro),
+        var(--nexa-turquesa)
+    );
+    color: var(--blanco);
+}
+
+.card.destacado h2 {
+    color: var(--blanco);
+}
+
+/* ===============================
+   BOTON WHATSAPP
+================================ */
+.btn-whatsapp {
+    display: block;
+    background-color: var(--whatsapp);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 14px;
+    font-weight: bold;
+    margin: 25px 0;
+    transition: background-color 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* ===============================
+   VOLVER
+================================ */
+.volver {
+    display: block;
+    margin-top: 20px;
+    color: var(--nexa-azul);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===============================
+   TEXTO GENERAL
+================================ */
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   SELLO ASESOR VERIFICADO
+================================ */
+/* ===============================
+   SELLO ASESOR VERIFICADO PREMIUM
+================================ */
+.badge-verificado {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 7px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--nexa-azul), var(--avvillas-azul));
+    border-radius: 30px;
+    box-shadow: 0 6px 14px rgba(0, 58, 143, 0.25);
+}
+
+
+        /* ===============================
+   ANIMACIÓN DE ENTRADA PREMIUM
+================================ */
+.card-asesor {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.card-asesor:nth-child(1) { animation-delay: 0.05s; }
+.card-asesor:nth-child(2) { animation-delay: 0.10s; }
+.card-asesor:nth-child(3) { animation-delay: 0.15s; }
+.card-asesor:nth-child(4) { animation-delay: 0.20s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===============================
+   COORDINADOR - AUTORIDAD MAXIMA
+================================ */
+
+.card-asesor.coordinador {
+    grid-column: 1 / -1; /* ocupa toda la fila */
+    max-width: 500px;
+    background: linear-gradient(
+        135deg,
+        var(--nexa-azul),
+        var(--avvillas-azul)
+    );
+    color: var(--blanco);
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 58, 143, 0.35);
+    transform: scale(1.03);
+    position: relative;
+    padding: 30px 20px;
+}
+
+/* Imagen más grande */
+.card-asesor.coordinador img {
+    width: 140px;
+    height: 140px;
+    border: 4px solid #ffffff;
+}
+
+/* Nombre en blanco */
+.card-asesor.coordinador h3 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Cargo en blanco */
+.card-asesor.coordinador span {
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Sello superior */
+.card-asesor.coordinador::before {
+    content: "LÍDER SALA 127";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+
+
+/* Sello superior */
+.card-asesor.coordinador::before {
+    content: "Coordinador Sala 127";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--nexa-azul);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+.btn-wp {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-wp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
